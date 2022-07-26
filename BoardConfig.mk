@@ -46,7 +46,6 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
-    androidboot.memcg=1 \
     lpm_levels.sleep_disabled=1 \
     service_locator.enable=1 \
     androidboot.usbcontroller=a600000.dwc3 \
