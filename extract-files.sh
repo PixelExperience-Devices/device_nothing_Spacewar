@@ -58,6 +58,9 @@ function blob_fixup() {
         system_ext/lib/libwfdnative.so | system_ext/lib64/libwfdnative.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
+        vendor/etc/init/netmgrd.rc)
+            sed -i "/modprobe/d" "${2}"
+            ;;
         vendor/lib64/hw/fingerprint.lahaina.so)
             "${PATCHELF}" --set-soname "fingerprint.lahaina.so" "${2}"
             ;;
