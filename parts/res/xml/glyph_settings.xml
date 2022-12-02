@@ -39,4 +39,15 @@
             android:title="@string/glyph_charging_meter_enable_title"
             android:summary="@string/glyph_charging_meter_summary" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="glyph_notification"
+        android:title="@string/glyph_notification_title">
+
+        <SwitchPreference
+            android:key="glyph_notification_blink"
+            android:defaultValue="false"
+            android:title="@string/glyph_notification_blink_enable_title"
+            android:summary="@string/glyph_notification_blink_summary" />
+    </PreferenceCategory>
 </PreferenceScreen>

@@ -26,6 +26,7 @@ public class GlyphSettingsFragment extends PreferenceFragment implements
     private MainSwitchPreference mSwitchBar;
     private SeekBarPreference mBrightnessPreference;
     private SwitchPreference mGlyphChargingMeterPreference;
+    private SwitchPreference mGlyphNotificationBlinkPreference;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -43,6 +44,9 @@ public class GlyphSettingsFragment extends PreferenceFragment implements
         mGlyphChargingMeterPreference = findPreference("glyph_charging_meter");
         mGlyphChargingMeterPreference.setOnPreferenceChangeListener(this);
 
+        mGlyphNotificationBlinkPreference = findPreference("glyph_notification_blink");
+        mGlyphNotificationBlinkPreference.setOnPreferenceChangeListener(this);
+
         updatePreferences();
     }
 
@@ -50,6 +54,7 @@ public class GlyphSettingsFragment extends PreferenceFragment implements
         boolean isGlyphEnabled = GlyphUtils.isGlyphEnabled(getActivity());
         mBrightnessPreference.setEnabled(isGlyphEnabled);
         mGlyphChargingMeterPreference.setEnabled(isGlyphEnabled);
+        mGlyphNotificationBlinkPreference.setEnabled(isGlyphEnabled);
     }
 
     @Override
