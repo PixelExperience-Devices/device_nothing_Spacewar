@@ -34,6 +34,11 @@ public class GlyphUtils {
                 "glyph_charging_meter", false);
     }
 
+    public static boolean isGlyphNotificationBlinkEnabled(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(
+                "glyph_notification_blink", false);
+    }
+
     public static int getGlyphBrightness(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getInt(
                 "glyph_brightness", /* default brightness */ 1365);

@@ -6,8 +6,10 @@
 
 package org.lineageos.settings.glyph;
 
+import android.app.NotificationManager;
 import android.app.Service;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -28,7 +30,9 @@ public class GlyphService extends Service {
     private static final int[] HORSE_RACE_LEDS = {13, 11, 9, 12, 10, 14, 15, 8};
 
     private BatteryManager mBatteryManager;
+    private NotificationManager mNotificationManager;
     private boolean mGlyphChargingMeterEnabled;
+    private boolean mGlyphNotificationBlinkEnabled;
     private int mGlyphBrightness;
     private boolean mGlyphPlaying;
     private LedHandler mHandler;
@@ -38,7 +42,11 @@ public class GlyphService extends Service {
         if (DEBUG) Log.d(TAG, "Creating service");
 
         mBatteryManager = (BatteryManager) getSystemService(BATTERY_SERVICE);
+        mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mHandler = new LedHandler(Looper.getMainLooper());
+
+        mNotificationManager.setNotificationListenerAccessGranted(
+                new ComponentName(this, GlyphNotificationListenerService.class), true);
 
         IntentFilter powerStateFilter = new IntentFilter();
         powerStateFilter.addAction(Intent.ACTION_POWER_CONNECTED);
@@ -50,10 +58,13 @@ public class GlyphService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         mGlyphChargingMeterEnabled = GlyphUtils.isGlyphEnabled(this)
                 && GlyphUtils.isGlyphChargingMeterEnabled(this);
+        mGlyphNotificationBlinkEnabled = GlyphUtils.isGlyphEnabled(this)
+                && GlyphUtils.isGlyphNotificationBlinkEnabled(this);
         mGlyphBrightness = GlyphUtils.getGlyphBrightness(this);
         if (DEBUG) {
             Log.d(TAG, "Starting service");
             Log.d(TAG, "mGlyphChargingMeterEnabled = " + mGlyphChargingMeterEnabled);
+            Log.d(TAG, "mGlyphNotificationBlinkEnabled = " + mGlyphNotificationBlinkEnabled);
             Log.d(TAG, "mGlyphBrightness = " + mGlyphBrightness);
         }
 

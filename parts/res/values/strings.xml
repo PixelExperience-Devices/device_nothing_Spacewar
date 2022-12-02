@@ -22,4 +22,7 @@
     <string name="glyph_charging_title">Charging</string>
     <string name="glyph_charging_meter_enable_title">Charging meter</string>
     <string name="glyph_charging_meter_summary">Display current battery level when charging</string>
+    <string name="glyph_notification_title">Notification</string>
+    <string name="glyph_notification_blink_enable_title">Notification blink</string>
+    <string name="glyph_notification_blink_summary">Blink when receiving notification</string>
 </resources>
