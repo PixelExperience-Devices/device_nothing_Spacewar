@@ -47,7 +47,7 @@ public class GlyphNotificationListenerService extends NotificationListenerServic
     public void onNotificationPosted(StatusBarNotification sbn) {
         super.onNotificationPosted(sbn);
         if (DEBUG) Log.d(TAG, "Notification received");
-        if (GlyphUtils.isGlyphNotificationBlinkEnabled(this)) {
+        if (GlyphUtils.isGlyphNotificationBlinkEnabled(this) && !sbn.isOngoing()) {
             mHandler.sendMessageDelayed(Message.obtain(mHandler, LedHandler.MSG_BLINK_LED), 0);
         }
     }
