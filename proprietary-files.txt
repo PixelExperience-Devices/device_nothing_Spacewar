@@ -137,9 +137,19 @@ vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_mixer_paths_qrd.xml
 vendor/etc/sound_trigger_platform_info.xml
 
+# Audio (Dirac)
+system/etc/permissions/se.dirac.acs.xml
+system/priv-app/DiracAudioControlService/DiracAudioControlService.apk
+system/priv-app/NothingDiracService/NothingDiracService.apk
+vendor/etc/dirac/interfacedb
+vendor/etc/diracmobile.config
+vendor/etc/diracvdd.bin
+vendor/lib/libDiracAPI_SHARED.so
+vendor/lib/libdiracapwrapper.so
+vendor/lib/soundfx/libdiraceffect.so
+
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdiraceffect.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
