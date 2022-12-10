@@ -1,4 +1,10 @@
 # Audio
+ro.vendor.dirac.acs.controller=gef
+ro.vendor.dirac.gef.mode=global
+ro.vendor.dirac.config=512
+ro.vendor.dirac.poolsize=3
+ro.vendor.dirac.acs.storeSettings=1
+ro.vendor.dirac.acs.ignore_error=1
 use.voice.path.for.pcm.voip=true
 
 # Bluetooth
