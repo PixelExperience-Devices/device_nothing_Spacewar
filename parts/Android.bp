@@ -18,7 +18,7 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
-        "org.lineageos.settings.resources",
+        "org.pixelexperience.settings.resources",
     ],
     optimize: {
         proguard_flags_files: ["proguard.flags"],

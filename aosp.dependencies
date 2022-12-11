@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "pixel-devices-blobs",
+    "repository": "vendor_nothing_Spacewar",
+    "target_path": "vendor/nothing/Spacewar",
+    "branch": "thirteen"
+  },
+  {
+    "remote": "pixel-devices",
+    "repository": "kernel_nothing_sm7325",
+    "target_path": "kernel/nothing/sm7325",
+    "branch": "thirteen"
+  }
+]
