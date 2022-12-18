@@ -119,7 +119,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.3-impl \
-    audio_amplifier.lahaina \
     audio.bluetooth.default \
     audio.primary.lahaina \
     audio.r_submix.default \
