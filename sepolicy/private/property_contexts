@@ -1,3 +1,7 @@
+# Camera
+ro.camera.req.fmq.                          u:object_r:exported_default_prop:s0
+ro.camera.res.fmq.                          u:object_r:exported_default_prop:s0
+
 # Audio (Dirac)
 persist.vendor.dirac.                       u:object_r:system_dirac_prop:s0
 ro.vendor.dirac.                            u:object_r:system_dirac_prop:s0
