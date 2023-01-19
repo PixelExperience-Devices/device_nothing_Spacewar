@@ -319,9 +319,9 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
-# Parts
+# Paranoid Glyph
 PRODUCT_PACKAGES += \
-    NothingParts
+    ParanoidGlyph
 
 # Perf
 PRODUCT_PACKAGES += \
