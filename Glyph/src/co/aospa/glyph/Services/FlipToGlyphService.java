@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
  *               2017-2018 The LineageOS Project
- *               2020-2022 Paranoid Android
+ *               2020-2023 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,12 +25,8 @@ import android.media.AudioManager;
 import android.os.IBinder;
 import android.util.Log;
 
-import co.aospa.glyph.Constants.Constants;
 import co.aospa.glyph.Manager.AnimationManager;
-import co.aospa.glyph.Manager.SettingsManager;
-import co.aospa.glyph.Manager.StatusManager;
 import co.aospa.glyph.Sensors.FlipToGlyphSensor;
-import co.aospa.glyph.Utils.FileUtils;
 
 public class FlipToGlyphService extends Service {
 
@@ -73,9 +69,9 @@ public class FlipToGlyphService extends Service {
 
     private void onFlip(boolean flipped) {
         if (flipped == isFlipped) return;
-        if (DEBUG) Log.d(TAG, "Flipped: " + Boolean.toString(flipped));
+        if (DEBUG) Log.d(TAG, "Flipped: " + flipped);
         if (flipped) {
-            AnimationManager.playCsv("flip", this);
+            AnimationManager.playCsv("flip");
             ringerMode = mAudioManager.getRingerModeInternal();
             mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
         } else {

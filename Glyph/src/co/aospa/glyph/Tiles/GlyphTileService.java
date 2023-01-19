@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
  * Copyright (C) 2017 The LineageOS Project
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022-2023 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,16 +16,14 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Services;
+package co.aospa.glyph.Tiles;
 
-import android.provider.Settings;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
 import co.aospa.glyph.R;
-import co.aospa.glyph.Constants.Constants;
-import co.aospa.glyph.Manager.StatusManager;
-import co.aospa.glyph.Utils.FileUtils;
+import co.aospa.glyph.Manager.SettingsManager;
+import co.aospa.glyph.Utils.ServiceUtils;
 
 /** Quick settings tile: Glyph **/
 public class GlyphTileService extends TileService {
@@ -53,11 +51,11 @@ public class GlyphTileService extends TileService {
     }
 
     private boolean getEnabled() {
-        return StatusManager.isAllLedActive();
+        return SettingsManager.isGlyphEnabled();
     }
 
     private void setEnabled(boolean enabled) {
-        StatusManager.setAllLedsActive(enabled);
-        FileUtils.writeLine(Constants.ALLWHITELEDPATH, enabled ? 4095 : 0);
+        SettingsManager.enableGlyph(enabled);
+        ServiceUtils.checkGlyphService();
     }
 }

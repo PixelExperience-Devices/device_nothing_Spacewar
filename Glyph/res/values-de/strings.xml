@@ -2,7 +2,7 @@
 <!--
      Copyright (C) 2013-2016 The CyanogenMod Project
                    2017 The LineageOS Project
-                   2020-2022 Paranoid Android
+                   2020-2023 Paranoid Android
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -38,15 +38,25 @@
     <string name="glyph_settings_call_title">Anruf</string>
     <string name="glyph_settings_call_toggle_title">Animation bei Anruf</string>
     <string name="glyph_settings_call_toggle_summary">Blinkende LEDs bei eingehenden Anrufen</string>
+    <string name="glyph_settings_call_sub_toggle_title">Animation der eingehenden Anrufen aktivieren</string>
+    <string name="glyph_settings_call_sub_animations_title">Muster</string>
 
     <string name="glyph_settings_notifs_title">Benachrichtigung</string>
     <string name="glyph_settings_notifs_toggle_title">Animation bei Benachrichtigung</string>
     <string name="glyph_settings_notifs_toggle_summary">Blinkende LEDs bei neuen Benachrichtigungen</string>
     <string name="glyph_settings_notifs_sub_title">Zuzulassende Anwendungen</string>
     <string name="glyph_settings_notifs_sub_toggle_title">Animation der Benachrichtigung aktivieren</string>
+    <string name="glyph_settings_notifs_sub_animations_title">Muster</string>
+
+    <string name="glyph_settings_misc_title">Verschiedenes</string>
+    <string name="glyph_settings_music_visualizer_toggle_title">Music Visualizer</string>
+    <string name="glyph_settings_music_visualizer_toggle_summary">DISCO LICHTER!\nDiese Option deaktiviert alle anderen Funktionen solange aktiv</string>
 
     <!-- QS tile -->
-    <string name="glyph_accessibility_quick_settings_off">Glyph aus</string>
-    <string name="glyph_accessibility_quick_settings_on">Glyph an</string>
+    <string name="glyph_accessibility_quick_settings">Glyph</string>
+    <string name="glyph_accessibility_quick_settings_torch">Glyph Taschenlampe</string>
+
+    <string name="glyph_accessibility_quick_settings_off">Aus</string>
+    <string name="glyph_accessibility_quick_settings_on">An</string>
 
 </resources>

@@ -2,7 +2,7 @@
 <!--
      Copyright (C) 2013-2016 The CyanogenMod Project
                    2017 The LineageOS Project
-                   2020-2022 Paranoid Android
+                   2020-2023 Paranoid Android
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -41,15 +41,25 @@
     <string name="glyph_settings_call_title">Calls</string>
     <string name="glyph_settings_call_toggle_title">Call animation</string>
     <string name="glyph_settings_call_toggle_summary">Flash LEDs on incoming calls</string>
+    <string name="glyph_settings_call_sub_toggle_title">Enable call animation</string>
+    <string name="glyph_settings_call_sub_animations_title">Pattern</string>
 
     <string name="glyph_settings_notifs_title">Notifications</string>
     <string name="glyph_settings_notifs_toggle_title">Notification animation</string>
     <string name="glyph_settings_notifs_toggle_summary">Flash LEDs on new notifications</string>
     <string name="glyph_settings_notifs_sub_title">Apps to allow</string>
     <string name="glyph_settings_notifs_sub_toggle_title">Enable notification animation</string>
+    <string name="glyph_settings_notifs_sub_animations_title">Pattern</string>
+
+    <string name="glyph_settings_misc_title">Miscellaneous</string>
+    <string name="glyph_settings_music_visualizer_toggle_title">Music Visualizer</string>
+    <string name="glyph_settings_music_visualizer_toggle_summary">DISCO LIGHTS!\nthis will disable all other glyph functions while enabled</string>
 
     <!-- QS tile -->
-    <string name="glyph_accessibility_quick_settings_off">Glyph Off</string>
-    <string name="glyph_accessibility_quick_settings_on">Glyph On</string>
+    <string name="glyph_accessibility_quick_settings">Glyph</string>
+    <string name="glyph_accessibility_quick_settings_torch">Glyph torch</string>
+
+    <string name="glyph_accessibility_quick_settings_off">Off</string>
+    <string name="glyph_accessibility_quick_settings_on">On</string>
 
 </resources>

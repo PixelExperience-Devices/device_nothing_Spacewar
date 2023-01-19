@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022-2023 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 package co.aospa.glyph.Utils;
 
+import android.content.Context;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -25,13 +26,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
+import co.aospa.glyph.R;
 import co.aospa.glyph.Constants.Constants;
 
 public final class FileUtils {
 
     private static final String TAG = "GlyphFileUtils";
     private static final boolean DEBUG = true;
+
+    private static Context context = Constants.CONTEXT;
 
     public static String readLine(String fileName) {
         String line = null;
@@ -93,11 +98,37 @@ public final class FileUtils {
         writeLine(fileName, Float.toString(value));
     }
 
-    public static void writeSingleLed(int led, int value) {
-        writeLine(Constants.SINGLELEDPATH, Integer.toString(led) + " " + Integer.toString(value));
+    public static void writeLineFromSlug(String slug, String value) {
+        String[] slugs = context.getResources().getStringArray(R.array.glyph_settings_paths);
+        String[] paths = context.getResources().getStringArray(R.array.glyph_settings_paths_absolute);
+        writeLine(paths[Arrays.asList(slugs).indexOf(slug)], value);
+    }
+
+    public static void writeLineFromSlug(String slug, int value) {
+        writeLineFromSlug(slug, Integer.toString(value));
+    }
+
+    public static void writeLineFromSlug(String slug, float value) {
+        writeLineFromSlug(slug, Float.toString(value));
+    }
+
+    public static void writeSingleLed(String led, String value) {
+        writeLine(context.getString(R.string.glyph_settings_paths_single_absolute), led + " " + value);
+    }
+
+    public static void writeSingleLed(int led, String value) {
+        writeSingleLed(Integer.toString(led), value);
+    }
+
+    public static void writeSingleLed(String led, int value) {
+        writeSingleLed(led, Integer.toString(value));
+    }
+
+    public static void writeSingleLed(String led, float value) {
+        writeSingleLed(led, Integer.toString(Math.round(value)));
     }
 
     public static void writeSingleLed(int led, float value) {
-        writeLine(Constants.SINGLELEDPATH, Integer.toString(led) + " " + Integer.toString(Math.round(value)));
+        writeSingleLed(Integer.toString(led), Integer.toString(Math.round(value)));
     }
 }

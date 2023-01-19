@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2022 Paranoid Android
+     Copyright (C) 2022-2023 Paranoid Android
 
      Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
@@ -18,9 +18,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/glyph_settings_notifs_toggle_title">
 
+    <co.aospa.glyph.Preference.GlyphAnimationPreference
+        android:key="glyph_settings_notifs_sub_preview"
+        android:selectable="false" />
+
     <com.android.settingslib.widget.MainSwitchPreference
         android:key="glyph_settings_notifs_sub_toggle"
         android:title="@string/glyph_settings_notifs_sub_toggle_title" />
+
+        <ListPreference
+            android:key="glyph_settings_notifs_sub_animations"
+            android:title="@string/glyph_settings_notifs_sub_animations_title"
+            android:defaultValue="@string/glyph_settings_notifs_animations_default"
+            android:entries="@array/glyph_settings_notifs_animations_names"
+            android:entryValues="@array/glyph_settings_notifs_animations_values"
+            android:layout="@layout/preference"
+            android:summary="%s" />
 
         <PreferenceCategory
             android:key="glyph_settings_notifs_sub"

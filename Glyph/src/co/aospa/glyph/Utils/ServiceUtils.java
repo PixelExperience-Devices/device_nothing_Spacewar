@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
  *               2017-2019 The LineageOS Project
- *               2020-2022 Paranoid Android
+ *               2020-2023 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,7 @@ import co.aospa.glyph.Manager.SettingsManager;
 import co.aospa.glyph.Services.CallReceiverService;
 import co.aospa.glyph.Services.ChargingService;
 import co.aospa.glyph.Services.FlipToGlyphService;
+import co.aospa.glyph.Services.MusicVisualizerService;
 import co.aospa.glyph.Services.NotificationService;
 
 public final class ServiceUtils {
@@ -35,82 +36,102 @@ public final class ServiceUtils {
     private static final String TAG = "GlyphServiceUtils";
     private static final boolean DEBUG = true;
 
-    public static void startCallReceiverService(Context context) {
+    private static Context context = Constants.CONTEXT;
+
+    private static void startCallReceiverService() {
         if (DEBUG) Log.d(TAG, "Starting Glyph call receiver service");
         context.startServiceAsUser(new Intent(context, CallReceiverService.class),
                 UserHandle.CURRENT);
     }
 
-    protected static void stopCallReceiverService(Context context) {
+    private static void stopCallReceiverService() {
         if (DEBUG) Log.d(TAG, "Stopping Glyph call receiver service");
         context.stopServiceAsUser(new Intent(context, CallReceiverService.class),
                 UserHandle.CURRENT);
     }
 
-    public static void startChargingService(Context context) {
+    private static void startChargingService() {
         if (DEBUG) Log.d(TAG, "Starting Glyph charging service");
         context.startServiceAsUser(new Intent(context, ChargingService.class),
                 UserHandle.CURRENT);
     }
 
-    protected static void stopChargingService(Context context) {
+    private static void stopChargingService() {
         if (DEBUG) Log.d(TAG, "Stopping Glyph charging service");
         context.stopServiceAsUser(new Intent(context, ChargingService.class),
                 UserHandle.CURRENT);
     }
 
-    public static void startFlipToGlyphService(Context context) {
+    private static void startFlipToGlyphService() {
         if (DEBUG) Log.d(TAG, "Starting Flip to Glyph service");
         context.startServiceAsUser(new Intent(context, FlipToGlyphService.class),
                 UserHandle.CURRENT);
     }
 
-    protected static void stopFlipToGlyphService(Context context) {
+    private static void stopFlipToGlyphService() {
         if (DEBUG) Log.d(TAG, "Stopping Flip to Glyph service");
         context.stopServiceAsUser(new Intent(context, FlipToGlyphService.class),
                 UserHandle.CURRENT);
     }
 
-    public static void startNotificationService(Context context) {
+    public static void startMusicVisualizerService() {
+        if (DEBUG) Log.d(TAG, "Starting Music Visualizer service");
+        context.startServiceAsUser(new Intent(context, MusicVisualizerService.class),
+                UserHandle.CURRENT);
+    }
+
+    protected static void stopMusicVisualizerService() {
+        if (DEBUG) Log.d(TAG, "Stopping Music Visualizer service");
+        context.stopServiceAsUser(new Intent(context, MusicVisualizerService.class),
+                UserHandle.CURRENT);
+    }
+
+    private static void startNotificationService() {
         if (DEBUG) Log.d(TAG, "Starting Glyph notifs service");
         context.startServiceAsUser(new Intent(context, NotificationService.class),
                 UserHandle.CURRENT);
     }
 
-    protected static void stopNotificationService(Context context) {
+    private static void stopNotificationService() {
         if (DEBUG) Log.d(TAG, "Stopping Glyph notifs service");
         context.stopServiceAsUser(new Intent(context, NotificationService.class),
                 UserHandle.CURRENT);
     }
 
-    public static void checkGlyphService(Context context) {
-        if (SettingsManager.isGlyphEnabled(context)) {
-            Constants.setBrightness(SettingsManager.getGlyphBrightness(context));
-            if (SettingsManager.isGlyphChargingEnabled(context)) {
-                startChargingService(context);
+    public static void checkGlyphService() {
+        if (SettingsManager.isGlyphEnabled()) {
+            Constants.setBrightness(SettingsManager.getGlyphBrightness());
+            if (SettingsManager.isGlyphChargingEnabled()) {
+                startChargingService();
             } else {
-                stopChargingService(context);
+                stopChargingService();
             }
-            if (SettingsManager.isGlyphCallEnabled(context)) {
-                startCallReceiverService(context);
+            if (SettingsManager.isGlyphCallEnabled()) {
+                startCallReceiverService();
             } else {
-                stopCallReceiverService(context);
+                stopCallReceiverService();
             }
-            if (SettingsManager.isGlyphNotifsEnabled(context)) {
-                startNotificationService(context);
+            if (SettingsManager.isGlyphNotifsEnabled()) {
+                startNotificationService();
             } else {
-                stopNotificationService(context);
+                stopNotificationService();
             }
-            if (SettingsManager.isGlyphFlipEnabled(context)) {
-                startFlipToGlyphService(context);
+            if (SettingsManager.isGlyphFlipEnabled()) {
+                startFlipToGlyphService();
             } else {
-                stopFlipToGlyphService(context);
+                stopFlipToGlyphService();
+            }
+            if (SettingsManager.isGlyphMusicVisualizerEnabled()) {
+                startMusicVisualizerService();
+            } else {
+                stopMusicVisualizerService();
             }
         } else {
-            stopChargingService(context);
-            stopCallReceiverService(context);
-            stopNotificationService(context);
-            stopFlipToGlyphService(context);
+            stopChargingService();
+            stopCallReceiverService();
+            stopNotificationService();
+            stopFlipToGlyphService();
+            stopMusicVisualizerService();
         }
     }
 }
