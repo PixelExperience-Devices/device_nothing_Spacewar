@@ -2,7 +2,7 @@
 <!--
      Copyright (C) 2015 The CyanogenMod Project
                    2018-2019 The LineageOS Project
-                   2020-2022 Paranoid Android
+                   2020-2023 Paranoid Android
 
      Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
@@ -33,19 +33,22 @@
 
     <SeekBarPreference
         android:key="glyph_settings_brightness"
-        android:max="4095"
-        android:defaultValue="1365"
+        android:max="4"
         android:title="@string/glyph_settings_brightness" />
 
     <PreferenceCategory
         android:key="glyph_settings_call"
         android:title="@string/glyph_settings_call_title" />
 
-        <SwitchPreference
+        <com.android.settingslib.PrimarySwitchPreference
             android:key="glyph_settings_call_toggle"
             android:defaultValue="true"
             android:title="@string/glyph_settings_call_toggle_title"
-            android:summary="@string/glyph_settings_call_toggle_summary" />
+            android:summary="@string/glyph_settings_call_toggle_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="org.pixelexperience.glyph"
+                 android:targetClass="org.pixelexperience.glyph.Settings.CallSettingsActivity"/>
+        </com.android.settingslib.PrimarySwitchPreference>
 
     <PreferenceCategory
         android:key="glyph_settings_notifs"
@@ -53,7 +56,7 @@
 
         <com.android.settingslib.PrimarySwitchPreference
             android:key="glyph_settings_notifs_toggle"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:title="@string/glyph_settings_notifs_toggle_title"
             android:summary="@string/glyph_settings_notifs_toggle_summary" >
             <intent android:action="android.intent.action.MAIN"
@@ -70,5 +73,15 @@
             android:defaultValue="true"
             android:title="@string/glyph_settings_charging_level_title"
             android:summary="@string/glyph_settings_charging_level_summary" />
+
+    <PreferenceCategory
+        android:key="glyph_settings_misc"
+        android:title="@string/glyph_settings_misc_title" />
+
+        <SwitchPreference
+            android:key="glyph_settings_music_visualizer_toggle"
+            android:defaultValue="false"
+            android:title="@string/glyph_settings_music_visualizer_toggle_title"
+            android:summary="@string/glyph_settings_music_visualizer_toggle_summary" />
 
 </PreferenceScreen>
