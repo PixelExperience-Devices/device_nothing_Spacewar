@@ -57,8 +57,8 @@
             android:title="@string/glyph_settings_notifs_toggle_title"
             android:summary="@string/glyph_settings_notifs_toggle_summary" >
             <intent android:action="android.intent.action.MAIN"
-                 android:targetPackage="co.aospa.glyph"
-                 android:targetClass="co.aospa.glyph.Settings.NotifsSettingsActivity"/>
+                 android:targetPackage="org.pixelexperience.glyph"
+                 android:targetClass="org.pixelexperience.glyph.Settings.NotifsSettingsActivity"/>
         </com.android.settingslib.PrimarySwitchPreference>
 
     <PreferenceCategory

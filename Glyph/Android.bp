@@ -13,7 +13,7 @@
 // limitations under the License.
 
 android_app {
-    name: "ParanoidGlyph",
+    name: "Glyph",
     certificate: "platform",
     srcs: ["src/**/*.java"],
     platform_apis: true,
@@ -25,19 +25,19 @@ android_app {
         "SettingsLib",
     ],
     required: [
-        "privapp_whitelist_co.aospa.glyph.xml",
-        "whitelist_co.aospa.glyph.xml",
+        "privapp_whitelist_org.pixelexperience.glyph.xml",
+        "whitelist_org.pixelexperience.glyph.xml",
     ],
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_co.aospa.glyph.xml",
-    src: "permissions/privapp_whitelist_co.aospa.glyph.xml",
+    name: "privapp_whitelist_org.pixelexperience.glyph.xml",
+    src: "permissions/privapp_whitelist_org.pixelexperience.glyph.xml",
     sub_dir: "permissions",
 }
 
 prebuilt_etc {
-    name: "whitelist_co.aospa.glyph.xml",
-    src: "permissions/whitelist_co.aospa.glyph.xml",
+    name: "whitelist_org.pixelexperience.glyph.xml",
+    src: "permissions/whitelist_org.pixelexperience.glyph.xml",
     sub_dir: "sysconfig",
 }

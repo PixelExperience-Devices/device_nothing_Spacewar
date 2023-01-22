@@ -221,6 +221,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
+# Glyph
+PRODUCT_PACKAGES += \
+    Glyph
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
@@ -318,10 +322,6 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libstagefrighthw
-
-# Paranoid Glyph
-PRODUCT_PACKAGES += \
-    ParanoidGlyph
 
 # Perf
 PRODUCT_PACKAGES += \

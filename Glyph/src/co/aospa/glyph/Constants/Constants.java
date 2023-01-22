@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Constants;
+package org.pixelexperience.glyph.Constants;
 
 public final class Constants {
 

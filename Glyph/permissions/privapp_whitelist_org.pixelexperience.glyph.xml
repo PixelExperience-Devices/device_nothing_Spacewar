@@ -15,7 +15,7 @@
   ~ limitations under the License
   -->
 <permissions>
-    <privapp-permissions package="co.aospa.glyph">
+    <privapp-permissions package="org.pixelexperience.glyph">
         <permission name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"/>
         <permission name="android.permission.READ_PHONE_STATE"/>
     </privapp-permissions>

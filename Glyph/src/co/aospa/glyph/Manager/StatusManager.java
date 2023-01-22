@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Manager;
+package org.pixelexperience.glyph.Manager;
 
 import android.util.Log;
 

@@ -16,19 +16,19 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Utils;
+package org.pixelexperience.glyph.Utils;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.UserHandle;
 import android.util.Log;
 
-import co.aospa.glyph.Constants.Constants;
-import co.aospa.glyph.Manager.SettingsManager;
-import co.aospa.glyph.Services.CallReceiverService;
-import co.aospa.glyph.Services.ChargingService;
-import co.aospa.glyph.Services.FlipToGlyphService;
-import co.aospa.glyph.Services.NotificationService;
+import org.pixelexperience.glyph.Constants.Constants;
+import org.pixelexperience.glyph.Manager.SettingsManager;
+import org.pixelexperience.glyph.Services.CallReceiverService;
+import org.pixelexperience.glyph.Services.ChargingService;
+import org.pixelexperience.glyph.Services.FlipToGlyphService;
+import org.pixelexperience.glyph.Services.NotificationService;
 
 public final class ServiceUtils {
 

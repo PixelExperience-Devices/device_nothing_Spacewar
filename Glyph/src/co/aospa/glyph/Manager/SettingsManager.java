@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Manager;
+package org.pixelexperience.glyph.Manager;
 
 import android.content.Context;
 import android.provider.Settings;
@@ -22,7 +22,7 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import co.aospa.glyph.Constants.Constants;
+import org.pixelexperience.glyph.Constants.Constants;
 
 public final class SettingsManager {
 

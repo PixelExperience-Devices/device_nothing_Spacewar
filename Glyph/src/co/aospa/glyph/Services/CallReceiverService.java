@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Services;
+package org.pixelexperience.glyph.Services;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -25,7 +25,7 @@ import android.os.IBinder;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import co.aospa.glyph.Manager.AnimationManager;
+import org.pixelexperience.glyph.Manager.AnimationManager;
 
 public class CallReceiverService extends Service {
 

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Services;
+package org.pixelexperience.glyph.Services;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -27,9 +27,9 @@ import android.os.BatteryManager;
 import android.os.IBinder;
 import android.util.Log;
 
-import co.aospa.glyph.Constants.Constants;
-import co.aospa.glyph.Manager.AnimationManager;
-import co.aospa.glyph.Utils.FileUtils;
+import org.pixelexperience.glyph.Constants.Constants;
+import org.pixelexperience.glyph.Manager.AnimationManager;
+import org.pixelexperience.glyph.Utils.FileUtils;
 
 public class ChargingService extends Service {
 

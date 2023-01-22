@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.glyph.Services;
+package org.pixelexperience.glyph.Services;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -25,7 +25,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import co.aospa.glyph.Settings.SettingsActivity;
+import org.pixelexperience.glyph.Settings.SettingsActivity;
 
 public class GlyphTileServiceActivity extends Activity {
 
@@ -39,7 +39,7 @@ public class GlyphTileServiceActivity extends Activity {
         ComponentName sourceClass = getIntent().getParcelableExtra(Intent.EXTRA_COMPONENT_NAME);
         if (DEBUG) Log.d(TAG, "sourceClass: " + sourceClass.getClassName());
         switch (sourceClass.getClassName()) {
-            case "co.aospa.glyph.Services.GlyphTileService":
+            case "org.pixelexperience.glyph.Services.GlyphTileService":
                 openActivitySafely(new Intent(this, SettingsActivity.class));
                 break;
             default:
