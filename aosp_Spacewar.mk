@@ -14,6 +14,14 @@ $(call inherit-product, device/nothing/Spacewar/device.mk)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# PixelExperience Properties
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_AOSP_RECOVERY := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_Spacewar
 PRODUCT_DEVICE := Spacewar
