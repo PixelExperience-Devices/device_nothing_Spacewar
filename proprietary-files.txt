@@ -1465,13 +1465,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# Sensor extension
-vendor/bin/hw/vendor.noth.hardware.sensor.sensor_extension@1.0-service
-vendor/etc/init/vendor.noth.hardware.sensor.sensor_extension@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.noth.hardware.sensor.sensor_extension@1.0-service.xml
-vendor/lib64/libsensor_extension.so
-vendor/lib64/vendor.noth.hardware.sensor.sensor_extension@1.0.so
-
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
