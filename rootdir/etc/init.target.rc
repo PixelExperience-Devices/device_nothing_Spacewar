@@ -137,7 +137,8 @@ on post-fs-data
 
 on early-boot
     start vendor.sensors
-
+    verity_update_state
+    
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
     # set default schedTune value for camera-daemon
@@ -213,6 +214,15 @@ on boot
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/exclamation_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/setting_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/setting_br
+
+    # Hung_task
+    write /proc/sys/kernel/hung_task_timeout_secs 180
+    write /proc/sys/kernel/hung_task_warnings 10
+    write /proc/sys/kernel/hung_task_check_count 32768
+    write /proc/sys/kernel/hung_task_panic 1
+    write /proc/sys/kernel/hung_task_check_interval_secs 0
+    write /proc/sys/kernel/hung_task_selective_monitoring 0
+
     #add by Dylan for TFT-404
     chmod 0660 /sys/devices/platform/soc/c440000.qcom,spmi/driver/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/force_key_warm_reset
     chown system system /sys/devices/platform/soc/c440000.qcom,spmi/driver/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/force_key_warm_reset
