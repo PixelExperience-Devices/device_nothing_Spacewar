@@ -18,9 +18,6 @@
     <!-- Boolean indicating performing a partial initial scan is enabled -->
     <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
 
-    <!-- Wifi driver supports 6GHz band for softap when chip support 6GHz -->
-    <bool translatable="false" name="config_wifiSoftap6ghzSupported">true</bool>
-
     <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
     <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
 
