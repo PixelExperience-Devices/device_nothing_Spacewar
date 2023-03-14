@@ -339,10 +339,6 @@ vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Bluetooth (aptX) - from redfin TP1A.221005.002
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 # Bluetooth firmware - from Samsung a52s
 vendor/firmware/msbtfw11.mbn|0f335b6aac6fc172189bc54bfc634eec9f3cc83d
 vendor/firmware/msbtfw11.tlv|d3370e79900765c193f8f689eaa96a9315f1bc53
