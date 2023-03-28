@@ -26,6 +26,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/nxp/nfc \
+    vendor/nxp/secure_element \
     vendor/qcom/opensource/usb/etc
 
 # A/B
