@@ -1121,10 +1121,6 @@ vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/video_system_specs.json
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 
-# NFC configs
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
-
 # NFC firmware
 vendor/lib64/libpn557_fw.so
 
