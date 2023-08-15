@@ -1,10 +1,13 @@
 [
   {
     "repository": "kernel_nothing_sm7325",
-    "target_path": "kernel/nothing/sm7325"
+    "target_path": "kernel/nothing/sm7325",
+    "branch": "thirteen"
   },
-    {
-    "repository": "packages_apps_ParanoidGlyph",
-    "target_path": "packages/apps/ParanoidGlyph"
+  {
+    "repository": "vendor_nothing_Spacewar",
+    "target_path": "vendor/nothing/Spacewar",
+    "branch": "thirteen",
+    "remote": "pixel-devices-blobs"
   }
 ]
